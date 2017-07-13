@@ -6,6 +6,10 @@ env:
   global:
     - DOCKER_COMPOSE_VERSION=1.11.2
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+    - CC_TEST_REPORTER_ID=3a88a5b114bb886a72e0a0910713e4a2a849bca846bfbf3de956014b52562790
+
+
+language: ruby
 
 services:
   - docker
